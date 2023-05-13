@@ -140,7 +140,20 @@ body.stream {
     opacity: 0.75;
     background-color: var(--control-buttons-bg-color);
 }
-
+.control-buttons-list01 {
+    position: fixed;
+    top: 720px;
+    display: flex;
+    right: 3.715rem;
+    background-color: rgb(245,245,245);
+    width: 400px;
+    justify-content: center;
+}
+.control-buttons-list01 button {
+    margin: 0 30px;
+    width: 3rem;
+    height: 3rem;
+}
 .control-button:hover {
     opacity: 1;
 }
