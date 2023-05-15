@@ -242,6 +242,11 @@ export class GoogMoreBox {
 
     private onViewVideoResize = (size: Size): void => {
         // padding: 10px
+        let bottom:any = document.getElementsByClassName("control-buttons-list01")[0]
+        bottom.style.width = `${size.width}px`;
+        bottom.style.top = `${size.height}px`;
+        let leftWidth = document.getElementsByClassName("control-buttons-list")[0].clientWidth
+        window.resizeTo(size.width + leftWidth + 16, size.height + bottom.clientHeight + 72); 
         this.holder.style.width = `${size.width - 2 * 10}px`;
     };
 

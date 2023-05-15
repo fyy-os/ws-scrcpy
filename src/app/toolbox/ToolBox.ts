@@ -20,7 +20,7 @@ export class ToolBox {
                 });
             }
         });
-        this.holder.appendChild(this.holder01)
+        document.body.appendChild(this.holder01)
     }
 
     public getHolderElement(): HTMLElement {
