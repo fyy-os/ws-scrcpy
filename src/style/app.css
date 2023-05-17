@@ -147,7 +147,7 @@ body.stream {
     top: 720px;
     display: flex;
     right: 3.715rem;
-    background-color: rgb(245,245,245);
+    background-color: var(--control-buttons-bg-color);
     width: 400px;
     justify-content: center;
 }
