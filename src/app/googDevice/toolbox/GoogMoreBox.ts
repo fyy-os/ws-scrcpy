@@ -43,7 +43,19 @@ export class GoogMoreBox {
                 client.sendMessage(new TextControlMessage(input.value));
             }
         };
+        window.addEventListener('keydown', function (e:any) {
+            if (e.ctrlKey && e.keyCode == 86) {
+                if (navigator.clipboard) {
+                    navigator.clipboard.readText().then(res=>{
+                        if (!res) {
+                            return
+                        }
+                        client.sendMessage(CommandControlMessage.createSetClipboardCommand(res));
+                    })
+                }
+            }
 
+        });
         const commands: HTMLElement[] = [];
         const codes = CommandControlMessage.Commands;
         for (const [action, command] of codes.entries()) {
