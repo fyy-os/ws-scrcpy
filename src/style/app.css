@@ -71,6 +71,10 @@ body {
     height: 100%;
     width: 100%;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column-reverse;
 }
 
 
@@ -103,7 +107,7 @@ body.stream {
 
 .device-view {
     z-index: 1;
-    float: right;
+    position: relative;
     display: inline-block;
 }
 
@@ -118,18 +122,19 @@ body.stream {
 }
 
 .video {
-    position: fixed;
-    right: 3.715rem;
-    top: 0;
+    /* position: fixed; */
+    /* right: 3.715rem; */
+    /* top: 0; */
     max-height: 100%;
     max-width: 100%;
-    background-color: #000000;
+    background-color: var(--control-buttons-bg-color);
 }
 
 
 .control-buttons-list {
-    float: right;
     width: 3.715rem;
+    position: absolute;
+    right: 0;
     background-color: var(--control-buttons-bg-color);
 }
 
@@ -143,10 +148,9 @@ body.stream {
     background-color: var(--control-buttons-bg-color);
 }
 .control-buttons-list01 {
-    position: fixed;
-    top: 720px;
+    height: 3.715rem;
     display: flex;
-    right: 3.715rem;
+    align-items: center;
     background-color: var(--control-buttons-bg-color);
     width: 400px;
     justify-content: center;
