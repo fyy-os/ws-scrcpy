@@ -304,7 +304,8 @@ export class GoogMoreBox {
         }
         this.input.value = ev.getText();
         this.input.select();
-        document.execCommand('copy');
+        // document.execCommand('copy');
+        navigator.clipboard.writeText(ev.getText())
     }
 
     private static wrap(
